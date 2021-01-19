@@ -104,7 +104,7 @@ if __name__ == '__main__':
     labels = []
     nb_images = 0
     for img in os.listdir(data_folder):
-        if not img.endswith('.tif') or not img.endswith('.jpg'):
+        if not img.endswith('.tif') and not img.endswith('.jpg'):
             continue
 
         rbox_file = img + '.rbox'
