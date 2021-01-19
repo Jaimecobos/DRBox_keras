@@ -262,7 +262,7 @@ val_dataset.parse_csv(images_dir=images_dir,
 
 # Set the batch size.
 
-batch_size = 6
+batch_size = 64
 
 # Set the image transformations for pre-processing and data augmentation options.
 
@@ -356,8 +356,8 @@ callbacks = [model_checkpoint,
 
 # If you're resuming a previous training, set `initial_epoch` and `final_epoch` accordingly.
 initial_epoch = 0
-final_epoch = 100
-steps_per_epoch = 1000
+final_epoch = 15
+steps_per_epoch = 300
 
 history = model.fit_generator(generator=train_generator,
                               steps_per_epoch=steps_per_epoch,
