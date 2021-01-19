@@ -192,8 +192,8 @@ alpha = 1.0
 # Set the paths to the datasets here.
 images_dir = '/content/drive/MyDrive/data/'
 
-train_labels_filename = "data/labelstrain.csv"
-val_labels_filename = "data/labelsvalidate.csv"
+train_labels_filename = "/content/drive/MyDrive/data/labelstrain.csv"
+val_labels_filename = "/content/drive/MyDrive/data/labelsvalidate.csv"
 
 proba_no_aug = 1/3
 
