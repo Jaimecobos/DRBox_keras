@@ -92,37 +92,37 @@ n_classes = 1  # Number of positive classes
 # Ships Parameters
 ##################################################################################
 
-scales = [0.04, 0.08, 0.1, 0.13, 0.16, 0.2]  # The anchor boxes scaling factors
-aspect_ratios = [[ 2, 3, 4],
-                 [ 2, 3, 4],
-                 [ 2.5, 3.5],
-                 [ 2.5, 3.5],
-                 [ 2.5, 3.5],
-                 [ 2.5, 3.5]]  # The anchor boxes aspect ratios
-
-angles = [i * np.pi / 9 for i in range(9)]  # the anchor boxes angles
-
-pos_ariou_threshold = 0.4
-neg_ariou_limit = 0.3
-
-# The offsets of the first anchor box center points from the top and left borders of the image as a fraction of the
-# step size for each predictor layer.
-offsets = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
-# The variances by which the encoded target coordinates are divided as in the original implementation os SSD
-variances = [0.1, 0.1, 0.2, 0.2, 1]
-# learning rate
-lr = 0.0001
-# l2 regularization parameter
-l2_reg = 0
-alpha = 3.0
-
-# Set the paths to the datasets here.
-images_dir = 'data/Ship/train_data/'
-
-train_labels_filename = "data/Ship/labelstrain.csv"
-val_labels_filename = "data/Ship/labelsvalidate.csv"
-
-proba_no_aug = 0.5
+# scales = [0.04, 0.08, 0.1, 0.13, 0.16, 0.2]  # The anchor boxes scaling factors
+# aspect_ratios = [[ 2, 3, 4],
+#                  [ 2, 3, 4],
+#                  [ 2.5, 3.5],
+#                  [ 2.5, 3.5],
+#                  [ 2.5, 3.5],
+#                  [ 2.5, 3.5]]  # The anchor boxes aspect ratios
+#
+# angles = [i * np.pi / 9 for i in range(9)]  # the anchor boxes angles
+#
+# pos_ariou_threshold = 0.4
+# neg_ariou_limit = 0.3
+#
+# # The offsets of the first anchor box center points from the top and left borders of the image as a fraction of the
+# # step size for each predictor layer.
+# offsets = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+# # The variances by which the encoded target coordinates are divided as in the original implementation os SSD
+# variances = [0.1, 0.1, 0.2, 0.2, 1]
+# # learning rate
+# lr = 0.0001
+# # l2 regularization parameter
+# l2_reg = 0
+# alpha = 3.0
+#
+# # Set the paths to the datasets here.
+# images_dir = 'data/Ships/train_data/'
+#
+# train_labels_filename = "data/Ships/labelstrain.csv"
+# val_labels_filename = "data/Ships/labelsvalidate.csv"
+#
+# proba_no_aug = 0.5
 
 ##################################################################################
 #  Vehicles Parameters
@@ -137,6 +137,7 @@ proba_no_aug = 0.5
 #                  [ 2.7]] # The anchor boxes aspect ratios
 #
 # angles = [i * np.pi / 6 for i in range(6)]  # the anchor boxes angles
+#
 # pos_ariou_threshold = 0.3
 # neg_ariou_limit = 0.01
 #
@@ -158,6 +159,43 @@ proba_no_aug = 0.5
 # val_labels_filename = "data/Car/labelsvalidate.csv"
 #
 # proba_no_aug = 1/3
+
+
+##################################################################################
+# Bread Parameters
+##################################################################################
+
+scales = [0.04, 0.08, 0.1, 0.13, 0.16, 0.2]  # The anchor boxes scaling factors
+aspect_ratios = [[2, 3, 4],
+                 [2, 3, 4],
+                 [2.5, 3.5],
+                 [2.5, 3.5],
+                 [2.5, 3.5],
+                 [2.5, 3.5]]  # The anchor boxes aspect ratios
+
+angles = [i * np.pi / 6 for i in range(6)]  # the anchor boxes angles
+
+pos_ariou_threshold = 0.4
+neg_ariou_limit = 0.3
+
+# The offsets of the first anchor box center points from the top and left borders of the image as a fraction of the
+# step size for each predictor layer.
+offsets = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+# The variances by which the encoded target coordinates are divided as in the original implementation os SSD
+variances = [0.1, 0.1, 0.2, 0.2, 1]
+# learning rate
+lr = 0.0001
+# l2 regularization parameter
+l2_reg = 0
+alpha = 1.0
+
+# Set the paths to the datasets here.
+images_dir = '/content/drive/MyDrive/data/'
+
+train_labels_filename = "data/labelstrain.csv"
+val_labels_filename = "data/labelsvalidate.csv"
+
+proba_no_aug = 1/3
 
 normalize_coords = True
 
