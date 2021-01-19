@@ -49,7 +49,7 @@ img_channels = 3  # Number of color channels of the model input images
 # The per-channel mean of the images in the dataset. Do not change this value if you're using any of the
 # pre-trained weights.
 mean_color = [123, 117, 104]
-n_classes = 2  # Number of positive classes
+n_classes = 1  # Number of positive classes
 
 
 ##################################################################################
@@ -266,7 +266,7 @@ val_dataset.parse_csv(images_dir=images_dir,
 
 # Set the batch size.
 
-batch_size = 32
+batch_size = 16
 
 # Set the image transformations for pre-processing and data augmentation options.
 
@@ -361,7 +361,7 @@ callbacks = [model_checkpoint,
 # If you're resuming a previous training, set `initial_epoch` and `final_epoch` accordingly.
 initial_epoch = 0
 final_epoch = 100
-steps_per_epoch = 50
+steps_per_epoch = 100
 
 history = model.fit_generator(generator=train_generator,
                               steps_per_epoch=steps_per_epoch,
