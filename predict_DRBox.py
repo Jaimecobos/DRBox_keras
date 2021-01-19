@@ -140,7 +140,7 @@ for i in tqdm(range(val_dataset_size)):
 
     else:
 
-        save_path = os.path.join(save_folder, batch_filenames[0])
+        save_path = os.path.join(save_folder, os.path.basename(batch_filenames[0]))
 
         visualize(batch_images[0], gt_labels=batch_original_labels[0], pred_labels=y_pred_decoded[0],
                   save_path=save_path)
