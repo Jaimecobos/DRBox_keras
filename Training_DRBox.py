@@ -223,9 +223,13 @@ model = drbox(image_size=(img_height, img_width, img_channels),
 # Load some weights into the model.
 # uncomment if you want to load pretrained weights
 # Set the path to the weights you want to load.
-weights_path = 'VGG_weights/VGG_ILSVRC_16_layers_fc_reduced.h5'
+weights_path = '/content/drive/MyDrive/VGG_ILSVRC_16_layers_fc_reduced.h5'
+print('Loading pre-trained weights...')
 if os.path.exists(weights_path):
     model.load_weights(weights_path, by_name=True)
+    print('Pre-trained weights loaded!')
+else:
+    print('Loading pre-trained weights failed!')
 
 # Instantiate an Adam optimizer and the DRbox loss function and compile the model.
 
