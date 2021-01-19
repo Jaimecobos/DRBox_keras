@@ -190,10 +190,10 @@ l2_reg = 0
 alpha = 1.0
 
 # Set the paths to the datasets here.
-images_dir = '/content/drive/MyDrive/data/'
+images_dir = '/content/drive/MyDrive/DRBox/data/'
 
-train_labels_filename = "/content/drive/MyDrive/data/labelstrain.csv"
-val_labels_filename = "/content/drive/MyDrive/data/labelsvalidate.csv"
+train_labels_filename = "/content/drive/MyDrive/DRBox/data/labelstrain.csv"
+val_labels_filename = "/content/drive/MyDrive/DRBox/data/labelsvalidate.csv"
 
 proba_no_aug = 1/3
 
