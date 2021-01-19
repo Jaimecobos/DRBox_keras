@@ -34,8 +34,7 @@ def get_list_of_labels(file):
         cx, cy, w, h, label, angle = rbox.split(' ')
         cx, cy, w, h, label, angle = float(cx), float(cy), float(w), float(h), float(label), float(angle)
 
-        # Unnecessary since we already do this ourselves
-        # angle = 2 * np.pi - angle * np.pi / 180
+        angle = 2 * np.pi - angle * np.pi / 180
         img_file = file.split('/')[-1][:-5]
 
         l.append([img_file, cx, cy, w, h, angle, label])
