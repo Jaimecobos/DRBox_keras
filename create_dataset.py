@@ -87,9 +87,10 @@ if __name__ == '__main__':
     shuffle = args.shuffle
     object = args.object
 
-    if object not in ['a', 'c', 's']:
+    if object not in ['a', 'c', 's', 'b']:
         raise ValueError(
-            "object type must be either 'a' for airplane, 'c' for cars, or 's' for ships but is : ".format(object))
+            "object type must be either 'a' for airplane, 'c' for cars, 's' for ships or 'b' for bread but is : ".format(
+                object))
 
     labels_train = []
     labels_validate = []
@@ -103,7 +104,7 @@ if __name__ == '__main__':
     labels = []
     nb_images = 0
     for img in os.listdir(data_folder):
-        if not img.endswith('.tif'):
+        if not img.endswith('.tif') or not img.endswith('.jpg'):
             continue
 
         rbox_file = img + '.rbox'
@@ -122,7 +123,7 @@ if __name__ == '__main__':
     print(len(labels))
     for l in labels:
 
-        if len(l[0].split('_')) == 4 or object == 'a' or object == 's':
+        if len(l[0].split('_')) == 4 or object == 'a' or object == 's' or object == 'b':
 
             base_name = l[0].split('.')[0]
 
