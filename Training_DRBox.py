@@ -335,7 +335,7 @@ reduce_lr = ReduceLROnPlateau(patience=5, factor=0.666, verbose=1, epsilon=1e-1)
 
 # Set the filepath under which you want to save the weights.
 model_checkpoint = ModelCheckpoint(
-    filepath='trained_models/drbox_epoch-{epoch:02d}_loss-{loss:.4f}_val_loss-{val_loss:.4f}.h5',
+    filepath='trained_models/drbox.h5',
     monitor='val_loss',
     verbose=1,
     save_best_only=True,
