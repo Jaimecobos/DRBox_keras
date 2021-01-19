@@ -136,6 +136,8 @@ class AnchorBoxes(Layer):
 
         # We need the shape of the input tensor
         batch_size, feature_map_height, feature_map_width, feature_map_channels = x.shape
+        batch_size, feature_map_height, feature_map_width, feature_map_channels = batch_size, int(
+            feature_map_height), int(feature_map_width), int(feature_map_channels)
 
         # Compute the grid of box center points. They are identical for all aspect ratios.
 
