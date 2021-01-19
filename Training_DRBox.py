@@ -49,7 +49,7 @@ img_channels = 3  # Number of color channels of the model input images
 # The per-channel mean of the images in the dataset. Do not change this value if you're using any of the
 # pre-trained weights.
 mean_color = [123, 117, 104]
-n_classes = 1  # Number of positive classes
+n_classes = 2  # Number of positive classes
 
 
 ##################################################################################
