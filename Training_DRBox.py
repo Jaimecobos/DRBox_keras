@@ -165,13 +165,13 @@ n_classes = 1  # Number of positive classes
 # Bread Parameters
 ##################################################################################
 
-scales = [0.04, 0.08, 0.1, 0.13, 0.16, 0.2]  # The anchor boxes scaling factors
-aspect_ratios = [[2, 3, 4],
-                 [2, 3, 4],
-                 [2.5, 3.5],
-                 [2.5, 3.5],
-                 [2.5, 3.5],
-                 [2.5, 3.5]]  # The anchor boxes aspect ratios
+scales = [0.18, 0.18, 0.18, 0.18, 0.18, 0.18]  # The anchor boxes scaling factors
+aspect_ratios = [[2.4],
+                 [2.4],
+                 [2.4],
+                 [2.4],
+                 [2.4],
+                 [2.4]]  # The anchor boxes aspect ratios
 
 angles = [i * np.pi / 6 for i in range(6)]  # the anchor boxes angles
 
